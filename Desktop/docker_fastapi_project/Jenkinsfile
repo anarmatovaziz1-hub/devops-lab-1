@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Deploy') {
             steps {
+                // 'docker compose' (дефиссіз) қолданамыз
                 sh 'docker compose down || true'
                 sh 'docker compose up -d --build'
             }
